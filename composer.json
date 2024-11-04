@@ -1,0 +1,17 @@
+{
+    "name": "vectorial1024/transmutation",
+    "description": "The \"collections\" library for array-like objects.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vectorial1024\\Transmutation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vectorial1024"
+        }
+    ],
+    "require": {}
+}
