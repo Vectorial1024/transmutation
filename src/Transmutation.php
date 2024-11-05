@@ -3,6 +3,7 @@
 namespace Vectorial1024\Transmutation;
 
 use ArrayAccess;
+use ArrayIterator;
 use ArrayObject;
 use Traversable;
 use Vectorial1024\AlofLib\Alof;
@@ -48,5 +49,32 @@ class Transmutation
     {
         $result = Alof::alo_values($this->alo);
         return new static(new ArrayObject($result));
+    }
+
+    /**
+     * Returns the array-like object inside this transmutation. Exact type returned depends on how this transmutation was constructed.
+     * @return ArrayAccess&Traversable
+     */
+    public function all(): ArrayAccess&Traversable
+    {
+        return $this->alo;
+    }
+
+    /**
+     * Converts the transmutation into an array.
+     * @param bool $force If true, incompatible keys will be reassigned instead of throwing an exception.
+     * @return array
+     */
+    public function toArray(bool $force = false): array
+    {
+        if ($this->alo instanceof ArrayObject || $this->alo instanceof ArrayIterator) {
+            /**
+             * @var ArrayObject|ArrayIterator
+             */
+            $temp = $this->alo;
+            return $temp->getArrayCopy();
+        }
+        // todo determine exact behavior
+        return [];
     }
 }
