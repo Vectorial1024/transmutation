@@ -8,7 +8,7 @@
 
 (This is a WIP project!)
 
-The "Collections" library for PHP array-like objects. (What are "array-like objects"? See `vectorial1024/alof_lib` [here](https://github.com/Vectorial1024/alof-lib).)
+The "Collections" library for PHP array-like objects. (What are "array-like objects"? See `vectorial1024/alof-lib` [here](https://github.com/Vectorial1024/alof-lib).)
 
 See the change log in the CHANGELOG.md file.
 
@@ -26,8 +26,8 @@ Using PHPUnit via Composer::
 composer run-script test
 ```
 
-## Relationship with `alof_lib`
-`alof_lib` does the dirty work and ensures the correctness of ALO functions, while this library provides an easy-to-use API for ALO processing.
+## Relationship with `alof-lib`
+`alof-lib` does the dirty work and ensures the correctness of ALO functions, while this library provides an easy-to-use API for ALO processing.
 
 [packagist-url]: https://packagist.org/packages/vectorial1024/transmutation
 [packagist-stats-url]: https://packagist.org/packages/vectorial1024/transmutation/stats
