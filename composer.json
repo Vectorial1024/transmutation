@@ -21,7 +21,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Vectorial1024\\Transmutation\\Test\\": "test/"
+            "Vectorial1024\\Transmutation\\Test\\": "tests/"
         }
     },
     "authors": [
