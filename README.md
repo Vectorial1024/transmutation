@@ -26,6 +26,9 @@ Using PHPUnit via Composer::
 composer run-script test
 ```
 
+## Relationship with `alof_lib`
+`alof_lib` does the dirty work and ensures the correctness of ALO functions, while this library provides an easy-to-use API for ALO processing.
+
 [packagist-url]: https://packagist.org/packages/vectorial1024/transmutation
 [packagist-stats-url]: https://packagist.org/packages/vectorial1024/transmutation/stats
 [github-repo-url]: https://github.com/Vectorial1024/transmutation
