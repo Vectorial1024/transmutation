@@ -2,6 +2,17 @@
     "name": "vectorial1024/transmutation",
     "description": "The \"collections\" library for array-like objects.",
     "type": "library",
+    "keywords": [
+        "library",
+        "utility",
+        "arrayaccess",
+        "traversable",
+        "arrayobject",
+        "arrayiterator",
+        "splobjectstorage",
+        "splfixedarray",
+        "weakmap"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
