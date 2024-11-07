@@ -61,8 +61,8 @@ class Transmutation
     }
 
     /**
-     * Converts the transmutation into an array.
-     * @param bool $force If true, incompatible keys will be reassigned instead of throwing an exception.
+     * Converts the transmutation into an array. Incompatible array keys will result in exceptions.
+     * @param bool $force If true, force-drops all existing (object) keys and reassigns with automatic array indexes.
      * @return array
      */
     public function toArray(bool $force = false): array
@@ -74,7 +74,14 @@ class Transmutation
             $temp = $this->alo;
             return $temp->getArrayCopy();
         }
-        // todo determine exact behavior
-        return [];
+        if ($force) {
+            // force-drops all array keys; this is trivial
+            return $this->values()->toArray();
+        }
+        $result = [];
+        Alof::alo_walk($this->alo, function (mixed $value, mixed $key) use (&$result) {
+            $result[$key] = $value;
+        });
+        return $result;
     }
 }
